@@ -1,5 +1,7 @@
 import random
 from random import choice
+import requests 
+
 
 
 def gen_pass(pass_length):
@@ -23,3 +25,9 @@ def invert(text):
     password1 = '!password (lenght)'
     password1 = '!password (lenght)'
     password1 = '!password (lenght)'
+    
+def get_duck_image_url():    
+    url = 'https://random-d.uk/api/random'
+    res = requests.get(url)
+    data = res.json()
+    return data['url']
